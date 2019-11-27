@@ -1,0 +1,16 @@
+<h1>Welcome!</h1>
+<div class="container">
+    Welome {{ message }}. You can manage your todos <a routerLink="/todos">Here</a>
+</div>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="getCustomMessage()">Get Welcome message</button>
+</div>
+
+<div class="container" *ngIf="userbean">
+    The message for you is: {{ messageReturned }}
+</div>
+
+<div class="container alert alert-warning" *ngIf="errorMessage">
+    An error occured {{ errorMessage }}
+</div>
